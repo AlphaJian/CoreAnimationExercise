@@ -15,6 +15,7 @@
 		C01E495D243D557800936835 /* AnsweringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E495C243D557800936835 /* AnsweringViewController.swift */; };
 		C01E495F243D5D5B00936835 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E495E243D5D5B00936835 /* Helper.swift */; };
 		C01E4961243EBFBC00936835 /* Speaking1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E4960243EBFBC00936835 /* Speaking1ViewController.swift */; };
+		C01E4967243F076000936835 /* Speaking2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E4966243F076000936835 /* Speaking2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C01E495C243D557800936835 /* AnsweringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnsweringViewController.swift; sourceTree = "<group>"; };
 		C01E495E243D5D5B00936835 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		C01E4960243EBFBC00936835 /* Speaking1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaking1ViewController.swift; sourceTree = "<group>"; };
+		C01E4966243F076000936835 /* Speaking2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaking2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C01E495A243D551200936835 /* ShakingRingViewController.swift */,
 				C01E495C243D557800936835 /* AnsweringViewController.swift */,
 				C01E4960243EBFBC00936835 /* Speaking1ViewController.swift */,
+				C01E4966243F076000936835 /* Speaking2ViewController.swift */,
 				C01E495E243D5D5B00936835 /* Helper.swift */,
 				C01E49392436CFAA00936835 /* Assets.xcassets */,
 				C01E493B2436CFAA00936835 /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				C01E495D243D557800936835 /* AnsweringViewController.swift in Sources */,
 				C01E4961243EBFBC00936835 /* Speaking1ViewController.swift in Sources */,
 				C01E495F243D5D5B00936835 /* Helper.swift in Sources */,
+				C01E4967243F076000936835 /* Speaking2ViewController.swift in Sources */,
 				C01E495B243D551200936835 /* ShakingRingViewController.swift in Sources */,
 				C01E49312436CFA800936835 /* AppDelegate.swift in Sources */,
 			);

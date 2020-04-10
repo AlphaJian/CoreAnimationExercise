@@ -52,6 +52,19 @@ extension CALayer {
             mask = shapeLayer
         }
     }
+
+    func semiCycle() -> CAShapeLayer {
+        rasterizationScale = UIScreen.screenScale
+        let center = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
+        let radius = bounds.size.width / 2
+        let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: CGFloat.pi * 2, endAngle: CGFloat.pi, clockwise: true)
+        let semiLayer = CAShapeLayer()
+        semiLayer.frame = CGRect(x: 0, y: -bounds.size.width, width: bounds.size.width, height: bounds.size.height)
+        semiLayer.path = path.cgPath
+        addSublayer(semiLayer)
+
+        return semiLayer
+    }
 }
 
 extension UIView: Cornerable { }
@@ -103,5 +116,42 @@ extension UIColor {
             return nil
         }
         return UIColor.colorHex(Int(hexNum))
+    }
+}
+
+class SemiLayer: CAShapeLayer {
+    init(isSemiAbove: Bool, rect: CGRect) {
+        super.init()
+        let center = CGPoint(x: rect.size.width / 2, y: rect.size.height / 2)
+        let radius = rect.size.width / 2
+        let bpath = UIBezierPath(arcCenter: center,
+                                radius: radius,
+                                startAngle: isSemiAbove ? CGFloat.pi * 2 : CGFloat.pi ,
+                                endAngle: isSemiAbove ? CGFloat.pi : CGFloat.pi * 2 ,
+                                clockwise: true)
+        frame = rect
+        path = bpath.cgPath
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class SpecialLayer: CAShapeLayer {
+    init(frame: CGRect) {
+        super.init()
+
+        let center = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
+        let radius = frame.size.width / 2
+
+        let bPath = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height), byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: CGSize(width: radius, height: radius))
+        self.frame = frame
+        path = bPath.cgPath
+
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

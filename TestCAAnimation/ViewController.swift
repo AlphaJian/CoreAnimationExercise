@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: BaseViewController {
 
-    let datasource = ["摇铃", "点答", "说话1"]
+    let datasource = ["摇铃", "点答", "说话1", "说话2"]
 
     lazy var tableview: UITableView = {
         let tb = UITableView(frame: CGRect(x: 0, y: 100, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 100), style: .plain)
@@ -52,6 +52,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             self.navigationController?.pushViewController(AnsweringViewController(), animated: true)
         case "说话1":
             self.navigationController?.pushViewController(Speaking1ViewController(), animated: true)
+        case "说话2":
+            self.navigationController?.pushViewController(Speaking2ViewController(), animated: true)
         default:
             break
         }

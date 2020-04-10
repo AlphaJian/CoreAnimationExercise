@@ -14,11 +14,11 @@ class Speaking1ViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
 
-        let layerWidth = 50.0
-        let layerHeight = 50.0
+        let layerWidth = 32.0
+        let layerHeight = 32.0
 
-        let waveWidth = 4.0
-        let waveHeight = 25.0
+        let waveWidth = 2.0
+        let waveHeight = 20.0
         let waveCount = 5.0
         let wavePaddingCount = waveCount + 1
         let wavePaddingWidth = (layerWidth - (waveWidth * waveCount)) / wavePaddingCount
@@ -32,7 +32,7 @@ class Speaking1ViewController: BaseViewController {
         bgLayer.frame = CGRect(x: 100, y: 100, width: layerWidth, height: layerHeight)
         bgLayer.backgroundColor = UIColor.colorHex(0x2999fa).cgColor
         bgLayer.beginTime = 1
-        bgLayer.corner(with: 25)
+        bgLayer.corner(with: 16)
 
         let loopCount = Int(ceil(waveCount / 2))
 
@@ -65,7 +65,7 @@ class Speaking1ViewController: BaseViewController {
 
     func getSpringAnimation() -> CASpringAnimation {
         let ani = CASpringAnimation(keyPath: "bounds.size.height")
-        ani.fromValue = 25
+        ani.fromValue = 20
         ani.toValue = 10
         ani.duration = 0.5
         ani.damping = 5
